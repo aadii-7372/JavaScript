@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array Insert</title>
+
+    <script>
+
+
+        // let newElement= 40;
+        // let position = 2;
+        function getElement() {
+            let array = [2, 89, 6, 78, 56, 43, 6, 8, 32]
+            let position = document.getElementById('position').value;
+            let newElement = document.getElementById('newEl').value;
+            for (let i = array.length - 1; i >= 0; i--) {
+                // document.write(array[i] + " ");
+                if (i >= position) {
+                    array[i + 1] = array[i];
+                    // document.write(array[i+1] + " ");
+                    if (i == position) {
+                        array[i] = newElement;
+                        alert(array[i] + ' is inserted')
+
+                    }
+                }
+
+            }
+            document.write(array + " ");
+
+        }
+
+
+
+        //  document.write(array + " "); 
+    </script>
+</head>
+
+<body>
+    <input type="text" id="position" placeholder="Enter position" required>
+    <input type="text" id="newEl" placeholder="Enter element" required>
+
+    <button onclick="getElement()"> click here</button>
+
+</body>
+
+</html>
